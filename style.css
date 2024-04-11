@@ -394,7 +394,7 @@ header div p {
 @media screen and (max-width: 768px) {
   header div h1 {
     position: absolute;
-    top: 3%;
+    top: 4%;
     left: 20px;
     transform: translateY(-50%);
     color: #c71264;
@@ -403,5 +403,136 @@ header div p {
 
   header div p {
     display: none;
+  }
+}
+/* about section */
+
+.giphy {
+  border-radius: 1.7rem;
+  mix-blend-mode: soft-light;
+  width: 420px;
+
+  cursor: pointer;
+  margin-right: 2rem;
+
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+.giphy:hover {
+  transform: scale(0.95);
+  box-shadow: 4px 6px 8px #262626;
+}
+
+/* product section */
+
+.product {
+  width: 350px;
+  height: 300px;
+  object-fit: fill;
+  /* aspect-ratio: 9/6; */
+  margin: 0 auto;
+  cursor: pointer;
+
+  padding-block: 1.5rem;
+
+  transition: transform 0.5s ease-in-out;
+}
+
+.product:hover {
+  transform: translateY(-1rem);
+}
+#products,
+#about {
+  padding: 2rem;
+  z-index: 99999;
+
+  color: #e6007e;
+}
+#products p,
+#about p,
+#arrivals p {
+  padding-block: 2rem;
+  color: #151618;
+}
+#about p {
+  text-align: justify;
+  line-height: 2;
+  font-size: 1.1rem;
+}
+
+#about h1 {
+  margin-bottom: 2rem;
+}
+#arrivals {
+  padding: 2rem;
+  color: #e6007e;
+  margin-bottom: 25rem;
+}
+.rows {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+/* .column {
+  filter: box-shadow(3px 5px 7px #151618);
+} */
+
+.card {
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 #151618;
+  max-width: 350px;
+  display: inline-block;
+  margin: 0 1rem;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.price {
+  color: grey;
+  font-size: 1.5rem;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  margin: 0 0.5rem;
+  color: white;
+  background-color: #e6007e;
+  text-align: center;
+  cursor: pointer;
+  width: 90%;
+  font-size: 1.2rem;
+  border-radius: 5rem;
+  transition: border-radius 0.7s ease-in-out, background-color 0.7s ease-in-out;
+}
+
+.card button:hover {
+  background-color: #151618;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .giphy {
+    width: 300px;
+    height: 300px;
+  }
+  .product,
+  .card {
+    max-width: 250px;
+  }
+  .column {
+    flex-basis: 100%;
+  }
+  .rows {
+    display: block;
+    width: 100%;
+  }
+  #products,
+  #arrivals,
+  #about {
+    margin-bottom: 0;
+    padding: 0 1rem;
   }
 }
